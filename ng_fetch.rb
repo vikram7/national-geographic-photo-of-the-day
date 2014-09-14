@@ -19,3 +19,5 @@ image_location = prefix + image
 `curl #{image_location} > ng_daily_image.jpg`
 
 `sh ./ng_set.sh ng_daily_image.jpg`
+
+`rm ng_daily_image.jpg`
