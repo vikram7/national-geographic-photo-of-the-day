@@ -14,4 +14,7 @@ image_location = prefix + image
 `curl #{image_location} > ng_daily_image.jpg`
 
 filepath = File.join(Dir.pwd, "ng_daily_image.jpg")
+
 `sh ./ng_set.sh #{filepath}`
+
+'rm ng_daily_image.jpg'
