@@ -17,4 +17,4 @@ filepath = File.join(Dir.pwd, "ng_daily_image.jpg")
 
 `sh ./ng_set.sh #{filepath}`
 
-'rm ng_daily_image.jpg'
+`rm ng_daily_image.jpg`
