@@ -2,7 +2,6 @@ FILE=$1
 
 /usr/bin/osascript <<END
 tell application "Finder"
-  set myFile to POSIX file "$FILE" as string
-  set desktop picture to file myFile
+  set desktop picture to POSIX file "$FILE"
 end tell
 END
