@@ -4,3 +4,4 @@ http://photography.nationalgeographic.com/photography/photo-of-the-day/
 
 Todos
 - refactor code
+-  add ability to have the photo automatically update without having to run script
