@@ -3,5 +3,5 @@ This is a small script to update your Mac OSX background as the latest national 
 http://photography.nationalgeographic.com/photography/photo-of-the-day/
 
 Todos
-- refactor code
+-  image fetched should be saved to temp location
 -  add ability to have the photo automatically update without having to run script
