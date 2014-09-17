@@ -1,17 +1,14 @@
-require 'pry'
-require 'net/http'
-require 'uri'
+require 'open-uri'
+require 'nokogiri'
 
-def open(url)
-  Net::HTTP.get(URI.parse(url))
+def image_url(page_url = 'http://photography.nationalgeographic.com/photography/photo-of-the-day')
+  html = open(page_url)
+  doc = Nokogiri::HTML(html)
+  src = doc.css('.primary_photo > a > img').first['src']
+  "http:#{src}"
 end
 
-link = open('http://photography.nationalgeographic.com/photography/photo-of-the-day/')
-prefix = "images.nationalgeographic.com/wpf/media-live"
-image = link.split("images.nationalgeographic.com/wpf/media-live")[1].split("/>")[0].split('"')[0]
-
-image_location = prefix + image
-`curl #{image_location} > ng_daily_image.jpg`
+`curl #{image_url} > ng_daily_image.jpg`
 
 filepath = File.join(Dir.pwd, "ng_daily_image.jpg")
 
